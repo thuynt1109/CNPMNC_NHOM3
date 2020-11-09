@@ -50,15 +50,6 @@
                         </p>
                     </a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a href="{{route('admin.brand')}}" class="nav-link">
-                        <i class="nav-icon fa fa-arrow-right"></i>
-                        <p>
-                            Brand
-                        </p>
-                    </a>
-                </li>
-                 -->
                 <li class="nav-item">
                     <a href="{{route('admin.order')}}" class="nav-link">
                         <i class="nav-icon fa fa-shopping-cart"></i>

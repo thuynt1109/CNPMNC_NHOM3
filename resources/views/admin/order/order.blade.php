@@ -55,7 +55,7 @@
                                 @foreach($order as $orders)
                                 <tr>
                                     <td>{{$orders->id}}</td>
-                                    <td>{{$orders->customer->first_name.' '.$orders->customer->last_name}}</td>
+                                    
                                     <td>৳ {{$orders->order_total}}</td>
                                     <td>{{$orders->order_status}}</td>
                                     <td>{{$orders->payment->payment_status}}</td>

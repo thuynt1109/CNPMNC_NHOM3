@@ -27,7 +27,7 @@
                         <div class="small-box bg-info">
                             <div class="inner">
                                 <h3>{{ $c_count }}</h3>
-                                <p>Categories</p>
+                                <p>Danh mục</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-bag"></i>
@@ -43,7 +43,7 @@
                         <div class="small-box bg-warning">
                             <div class="inner">
                                 <h3>{{ $p_count }}</h3>
-                                <p>Products</p>
+                                <p>Sản phẩm</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-person-add"></i>
@@ -57,7 +57,7 @@
                         <div class="small-box bg-danger">
                             <div class="inner">
                                 <h3>{{ $o_count }}</h3>
-                                <p>Orders</p>
+                                <p>Đặt hàng</p>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-pie-graph"></i>
