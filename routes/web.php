@@ -2,7 +2,7 @@
 
 Route::get('/','MainController@index')->name('homepage');
 Route::get('/all-category','MainController@getCategories');
-Route::get('/all-brand','MainController@getBrands');
+// Route::get('/all-brand','MainController@getBrands');
 Route::get('/featured-product','MainController@getFeaturedProducts');
 Route::get('/new-product','MainController@getNewProducts');
 Route::get('/category/{id}','MainController@getCatProducts');

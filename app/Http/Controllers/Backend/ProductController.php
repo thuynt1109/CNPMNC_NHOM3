@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use Auth;
 use App\Model\Product;
 use App\Model\Category;
-use App\Model\Brand;
 use DB;
 
 class ProductController extends Controller
@@ -22,19 +21,16 @@ class ProductController extends Controller
         //$product = Product::all();
         $product = DB::table('products')
             ->join('categories','products.cat_id', '=', 'categories.id')
-            // ->join('brands','products.brand_id', '=', 'brands.id')
             ->join('users','products.uploaded_by', '=', 'users.id')
             ->select('products.*','categories.cat_name','users.name')
             ->get();
 
             //dd($product);
         $category = Category::where('cat_status', 1)->get();
-        // $brand = Brand::where('brand_status', 1)->get();
 
         return view('admin.product.product',[
             'product'=>$product,
             'category'=>$category,
-            // 'brand'=>$brand,
         ]);
     }
 
@@ -76,14 +72,12 @@ class ProductController extends Controller
             $product->gallery_image = json_encode($data);
         }
         $product->cat_id = $request->cat_id;
-        // $product->brand_id = $request->brand_id;
         $product->product_name = $request->product_name;
         $product->short_desc = $request->short_desc;
         $product->long_desc = $request->long_desc;
         $product->discount_price = $request->discount_price;
         $product->product_price = $request->product_price;
         $product->quantity = $request->quantity;
-        // $product->size = $request->size;
         $product->status = $request->status;
         $product->uploaded_by = Auth::user()->id;
 
@@ -144,14 +138,12 @@ class ProductController extends Controller
             $product->gallery_image = json_encode($data);
         }
         $product->cat_id = $request->cat_id;
-        // $product->brand_id = $request->brand_id;
         $product->product_name = $request->product_name;
         $product->short_desc = $request->short_desc;
         $product->long_desc = $request->long_desc;
         $product->discount_price = $request->discount_price;
         $product->product_price = $request->product_price;
         $product->quantity = $request->quantity;
-        // $product->size = $request->size;
         $product->status = $request->status;
         
         $product->save();

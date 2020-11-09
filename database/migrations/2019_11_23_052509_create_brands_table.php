@@ -13,14 +13,7 @@ class CreateBrandsTable extends Migration
      */
     public function up()
     {
-        Schema::create('brands', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('brand_name')->unique();
-            $table->mediumText('brand_desc')->nullable();
-            $table->string('brand_image')->nullable();
-            $table->tinyInteger('brand_status');
-            $table->timestamps();
-        });
+        //
     }
 
     /**
@@ -30,6 +23,6 @@ class CreateBrandsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('brands');
+        //
     }
 }

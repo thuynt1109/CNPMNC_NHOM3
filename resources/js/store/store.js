@@ -1,7 +1,6 @@
 export default {
   state: {
 		categories: [],
-    brands: [],
     featuredProducts: [],
     newProducts: [],
     catProducts: [],
@@ -17,9 +16,7 @@ export default {
     getCategory(state){
   		return state.categories
   	},
-    getBrand(state){
-      return state.brands
-    },
+  
     getfeaturedProduct(state){
       return state.featuredProducts
     },
@@ -57,13 +54,7 @@ export default {
             context.commit("allCategory", response.data)
           })
     },
-    brand(context){
-      axios.get('/all-brand')
-          .then((response) =>{
-            //console.log(response.data)
-            context.commit("allBrand", response.data)
-          })
-    },
+    
     featuredProduct(context){
       axios.get('/featured-product')
           .then((response) =>{
@@ -133,9 +124,7 @@ export default {
     allCategory(state, data){
       return state.categories = data
     },
-    allBrand(state, data){
-      return state.brands = data
-    },
+    
     featureProducts(state, data){
       return state.featuredProducts = data
     },

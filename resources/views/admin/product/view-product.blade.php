@@ -13,10 +13,7 @@
                         <div class="col-md-4 border">Category Name</div>
                         <div class="col-md-8 border">.col-md-4 .ml-auto</div>
                     </div>
-                    <!-- <div class="row ">
-                        <div class="col-md-4 border">Brand Name</div>
-                        <div class="col-md-8 border">.col-md-4 .ml-auto</div>
-                    </div> -->
+                    
                     <div class="row ">
                         <div class="col-md-4 border">Product Name</div>
                         <div class="col-md-8 border">.col-md-4 .ml-auto</div>

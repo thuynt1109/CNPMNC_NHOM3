@@ -25,36 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `brands`
---
-
-CREATE TABLE `brands` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `brand_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `brand_desc` mediumtext COLLATE utf8mb4_unicode_ci,
-  `brand_image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `brand_status` tinyint(4) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `brands`
---
-
-INSERT INTO `brands` (`id`, `brand_name`, `brand_desc`, `brand_image`, `brand_status`, `created_at`, `updated_at`) VALUES
-(2, 'Samsung', 'this is description', 'admin/images/WL450_AG_FR.webp', 1, '2019-11-22 23:54:34', '2019-12-07 11:57:32'),
-(3, 'Dell', 'Hello Dell.', 'admin/images/men-s-backpacking-shirt-travel100-burgundy.jpg', 1, '2019-11-23 00:00:42', '2019-12-07 11:57:17'),
-(4, 'Yellow', NULL, '', 1, '2019-12-07 11:57:50', '2019-12-07 11:57:50'),
-(5, 'Bata', NULL, '', 1, '2019-12-15 11:33:30', '2019-12-15 11:33:30'),
-(6, 'Asus', NULL, '', 1, '2019-12-15 11:34:19', '2019-12-15 11:34:19'),
-(7, 'Urban Fashion BD', NULL, '', 1, '2019-12-15 11:35:58', '2019-12-15 11:35:58'),
-(8, 'Richman', NULL, '', 1, '2019-12-15 11:37:31', '2019-12-15 11:37:31'),
-(9, 'Ecstasy', NULL, '', 1, '2019-12-15 11:37:43', '2019-12-15 11:37:43');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `categories`
 --
 
@@ -159,7 +129,6 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_11_19_175400_create_categories_table', 1),
-(4, '2019_11_23_052509_create_brands_table', 2),
 (5, '2019_12_03_160921_create_products_table', 3),
 (6, '2018_12_23_120000_create_shoppingcart_table', 4),
 (7, '2019_12_17_043042_create_customers_table', 5),
@@ -287,7 +256,6 @@ INSERT INTO `payments` (`id`, `order_id`, `payment_info`, `payment_status`, `cre
 CREATE TABLE `products` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `cat_id` int(11) NOT NULL,
-  `brand_id` int(11) NOT NULL,
   `product_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `short_desc` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `long_desc` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -307,7 +275,7 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `cat_id`, `brand_id`, `product_name`, `short_desc`, `long_desc`, `discount_price`, `product_price`, `quantity`, `size`, `image`, `gallery_image`, `status`, `uploaded_by`, `created_at`, `updated_at`) VALUES
+INSERT INTO `products` (`id`, `cat_id`, `product_name`, `short_desc`, `long_desc`, `discount_price`, `product_price`, `quantity`, `size`, `image`, `gallery_image`, `status`, `uploaded_by`, `created_at`, `updated_at`) VALUES
 (9, 7, 4, 'Headphone', 'this is headphone', 'ddd', 150.00, 200.00, 10, 'l', 'admin/images/product_images/20191207185149_images.jpg', '[\"admin\\/images\\/product_images\\/1-500x500.jpg\",\"admin\\/images\\/product_images\\/41TxNIo3cQL.jpg\",\"admin\\/images\\/product_images\\/46-bfrybluesht02-being-fab-original-imaekjr8ymhnxznp.jpeg\"]', 1, '1', '2019-12-07 12:51:49', '2019-12-29 00:19:24'),
 (10, 7, 3, 'Mobile', 'wwww', 'aa', 1000.00, 1200.00, 33, 'xl', 'admin/images/product_images/20191214045649_41TxNIo3cQL.jpg', '[\"admin\\/images\\/product_images\\/46-bfrybluesht02-being-fab-original-imaekjr8ymhnxznp.jpeg\",\"admin\\/images\\/product_images\\/ERIDANUS-2017-Men-s-Plaid-Cotton-Dress-Shirts-Male-High-Quality-Long-Sleeve-Slim-Fit-Business.webp\"]', 1, '1', '2019-12-13 22:56:49', '2019-12-13 22:56:49'),
 (11, 7, 7, 'Shoe', 'Product details of Sprint Grey Mash Sneaker for Men\r\nProduct Type: Sneaker\r\nColor: Grey\r\nHeel Height: Low\r\nMain Material: Mash\r\nSole: Rubberize Eva\r\nGender: Men\r\nAbout Apex\r\nApex offers an array of shoes and sandals from the finest quality leather and craftsmanship wrapped in comfort only for those men who value authenticity and originality above everything. When designing an Apex equal emphasis is given to classic designs comfort and durability.\r\nSpecifications of Sprint Grey Mash Sneaker for Men\r\nBrandSprintSKU109710652_BD-1026374915Main MaterialBonded FabricMen Shoes ClosureSlip-on & Pull-onShoe StyleCasual', 'Product details of Sprint Grey Mash Sneaker for Men\r\nProduct Type: Sneaker\r\nColor: Grey\r\nHeel Height: Low\r\nMain Material: Mash\r\nSole: Rubberize Eva\r\nGender: Men\r\nAbout Apex\r\nApex offers an array of shoes and sandals from the finest quality leather and craftsmanship wrapped in comfort only for those men who value authenticity and originality above everything. When designing an Apex equal emphasis is given to classic designs comfort and durability.\r\nSpecifications of Sprint Grey Mash Sneaker for Men\r\nBrandSprintSKU109710652_BD-1026374915Main MaterialBonded FabricMen Shoes ClosureSlip-on & Pull-onShoe StyleCasualProduct details of Sprint Grey Mash Sneaker for Men\r\nProduct Type: Sneaker\r\nColor: Grey\r\nHeel Height: Low\r\nMain Material: Mash\r\nSole: Rubberize Eva\r\nGender: Men\r\nAbout Apex\r\nApex offers an array of shoes and sandals from the finest quality leather and craftsmanship wrapped in comfort only for those men who value authenticity and originality above everything. When designing an Apex equal emphasis is given to classic designs comfort and durability.\r\nSpecifications of Sprint Grey Mash Sneaker for Men\r\nBrandSprintSKU109710652_BD-1026374915Main MaterialBonded FabricMen Shoes ClosureSlip-on & Pull-onShoe StyleCasual', 1500.00, 2000.00, 20, 'xl', 'admin/images/product_images/20191215174838_f-p-1.jpg', '[\"admin\\/images\\/product_images\\/f-p-1.jpg\"]', 1, '3', '2019-12-15 11:48:38', '2019-12-15 11:48:38'),
@@ -404,9 +372,6 @@ INSERT INTO `users` (`id`, `role`, `name`, `phone`, `email`, `email_verified_at`
 --
 -- Indexes for table `brands`
 --
-ALTER TABLE `brands`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `brands_brand_name_unique` (`brand_name`);
 
 --
 -- Indexes for table `categories`

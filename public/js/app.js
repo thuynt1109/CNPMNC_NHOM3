@@ -57788,62 +57788,7 @@
                                             )
                                         ])
                                     ]),
-                                    _vm._v(" "),
-                                    _c("aside", { staticClass: "left_widgets p_filter_widgets" }, [
-                                        _vm._m(1),
-                                        _vm._v(" "),
-                                        _c("div", { staticClass: "widgets_inner" }, [
-                                            _c(
-                                                "ul", { staticClass: "list" },
-                                                _vm._l(_vm.showAllBrands, function(brand) {
-                                                    return _c("li", [
-                                                        _c("input", {
-                                                            directives: [{
-                                                                name: "model",
-                                                                rawName: "v-model",
-                                                                value: _vm.bra,
-                                                                expression: "bra"
-                                                            }],
-                                                            attrs: { type: "checkbox", id: brand.id },
-                                                            domProps: {
-                                                                value: brand.id,
-                                                                checked: Array.isArray(_vm.bra) ?
-                                                                    _vm._i(_vm.bra, brand.id) > -1 : _vm.bra
-                                                            },
-                                                            on: {
-                                                                change: function($event) {
-                                                                    var $$a = _vm.bra,
-                                                                        $$el = $event.target,
-                                                                        $$c = $$el.checked ? true : false
-                                                                    if (Array.isArray($$a)) {
-                                                                        var $$v = brand.id,
-                                                                            $$i = _vm._i($$a, $$v)
-                                                                        if ($$el.checked) {
-                                                                            $$i < 0 && (_vm.bra = $$a.concat([$$v]))
-                                                                        } else {
-                                                                            $$i > -1 &&
-                                                                                (_vm.bra = $$a
-                                                                                    .slice(0, $$i)
-                                                                                    .concat($$a.slice($$i + 1)))
-                                                                        }
-                                                                    } else {
-                                                                        _vm.bra = $$c
-                                                                    }
-                                                                }
-                                                            }
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c("label", { attrs: { for: brand.id } }, [
-                                                            _vm._v(_vm._s(brand.brand_name))
-                                                        ])
-                                                    ])
-                                                }),
-                                                0
-                                            )
-                                        ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _vm._m(2)
+                                    
                                 ])
                             ]),
                             _vm._v(" "),
