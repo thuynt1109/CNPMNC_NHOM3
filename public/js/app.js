@@ -57559,7 +57559,7 @@
                                                         ])
                                                     ]),
                                                     _vm._v(" "),
-                                                    _c("td", [_c("h5", [_vm._v("৳ " + _vm._s(cart.price))])]),
+                                                    _c("td", [_c("h5", [_vm._v(_vm._s(cart.price) + "đ")])]),
                                                     _vm._v(" "),
                                                     _c("td", [
                                                         _c("div", { staticClass: "product_count" }, [
@@ -57593,7 +57593,7 @@
                                                     ]),
                                                     _vm._v(" "),
                                                     _c("td", [
-                                                        _c("h5", [_vm._v("৳ " + _vm._s(cart.subtotal))])
+                                                        _c("h5", [_vm._v(_vm._s(cart.subtotal) + "đ")])
                                                     ]),
                                                     _vm._v(" "),
                                                     _c("td", [
@@ -57620,7 +57620,7 @@
                                                 _vm._m(1),
                                                 _vm._v(" "),
                                                 _c("td", [
-                                                    _c("h5", [_vm._v("৳ " + _vm._s(_vm.showSubtotal))])
+                                                    _c("h5", [_vm._v(_vm._s(_vm.showSubtotal) + "đ")])
                                                 ]),
                                                 _vm._v(" "),
                                                 _c("td")
@@ -57905,19 +57905,19 @@
                                                             _c("div", { staticClass: "mt-3" }, [
                                                                 _c("span", { staticClass: "mr-4" }, [
                                                                     _vm._v(
-                                                                        "৳ " + _vm._s(catProduct.discount_price)
+                                                                        _vm._s(catProduct.discount_price) + "đ"
                                                                     )
                                                                 ]),
                                                                 _vm._v(" "),
                                                                 _c("del", [
                                                                     _vm._v(
-                                                                        "৳ " + _vm._s(catProduct.product_price)
+                                                                        _vm._s(catProduct.product_price) + "đ"
                                                                     )
                                                                 ])
                                                             ]) :
                                                             _c("div", { staticClass: "mt-3" }, [
                                                                 _c("span", { staticClass: "mr-4" }, [
-                                                                    _vm._v("৳" + _vm._s(catProduct.product_price))
+                                                                    _vm._v(_vm._s(catProduct.product_price) + "đ")
                                                                 ])
                                                             ])
                                                         ],
@@ -58093,16 +58093,16 @@
                                                     f_Product.discount_price ?
                                                     _c("div", { staticClass: "mt-3" }, [
                                                         _c("span", { staticClass: "mr-4" }, [
-                                                            _vm._v("৳ " + _vm._s(f_Product.discount_price))
+                                                            _vm._v(_vm._s(f_Product.discount_price) + "đ")
                                                         ]),
                                                         _vm._v(" "),
                                                         _c("del", [
-                                                            _vm._v("৳ " + _vm._s(f_Product.product_price))
+                                                            _vm._v(_vm._s(f_Product.product_price) + "đ")
                                                         ])
                                                     ]) :
                                                     _c("div", { staticClass: "mt-3" }, [
                                                         _c("span", { staticClass: "mr-4" }, [
-                                                            _vm._v("৳ " + _vm._s(f_Product.product_price))
+                                                            _vm._v(_vm._s(f_Product.product_price) + "đ")
                                                         ])
                                                     ])
                                                 ],
@@ -58168,16 +58168,16 @@
                                                     newProduct.discount_price ?
                                                     _c("div", { staticClass: "mt-3" }, [
                                                         _c("span", { staticClass: "mr-4" }, [
-                                                            _vm._v("৳ " + _vm._s(newProduct.discount_price))
+                                                            _vm._v(_vm._s(newProduct.discount_price) + "đ")
                                                         ]),
                                                         _vm._v(" "),
                                                         _c("del", [
-                                                            _vm._v("৳ " + _vm._s(newProduct.product_price))
+                                                            _vm._v(_vm._s(newProduct.product_price) + "đ")
                                                         ])
                                                     ]) :
                                                     _c("div", { staticClass: "mt-3" }, [
                                                         _c("span", { staticClass: "mr-4" }, [
-                                                            _vm._v("৳ " + _vm._s(newProduct.product_price))
+                                                            _vm._v(_vm._s(newProduct.product_price) + "đ")
                                                         ])
                                                     ])
                                                 ],
@@ -59523,16 +59523,16 @@
                                     _vm.singleProduct.discount_price ?
                                     _c("span", [
                                         _c("h2", [
-                                            _vm._v("৳ " + _vm._s(_vm.singleProduct.discount_price))
+                                            _vm._v(_vm._s(_vm.singleProduct.discount_price) + "đ")
                                         ]),
                                         _vm._v(" "),
                                         _c("del", [
-                                            _vm._v("৳ " + _vm._s(_vm.singleProduct.product_price))
+                                            _vm._v(_vm._s(_vm.singleProduct.product_price) + "đ")
                                         ])
                                     ]) :
                                     _c("span", [
                                         _c("h2", [
-                                            _vm._v("৳ " + _vm._s(_vm.singleProduct.product_price))
+                                            _vm._v(_vm._s(_vm.singleProduct.product_price) + "đ")
                                         ])
                                     ]),
                                     _vm._v(" "),

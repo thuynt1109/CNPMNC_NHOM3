@@ -98,11 +98,11 @@
                 <h4>{{f_Product.product_name}}</h4>
               </router-link>
               <div class="mt-3" v-if="f_Product.discount_price">
-                <span class="mr-4">৳ {{f_Product.discount_price}}</span>
+                <span class="mr-4"> {{f_Product.discount_price}} đ</span>
                 <del>৳ {{f_Product.product_price}}</del>
               </div>
               <div class="mt-3" v-else>
-                <span class="mr-4">৳ {{f_Product.product_price}}</span>
+                <span class="mr-4"> {{f_Product.product_price}} đ</span>
               </div>
             </div>
           </div>
