@@ -6,7 +6,7 @@
             <div class="offset-3 col-md-6">
                 <div class="card mt-5 mb-5">
                     <div class="card-header text-center">
-                        <h3>Please Login</h3>
+                        <h3>Đăng ký ngay</h3>
                         <h5 v-if="success" class="text-success">{{success}}</h5>
                     </div>
                     <div class="card-body">

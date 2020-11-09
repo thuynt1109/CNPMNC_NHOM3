@@ -5,8 +5,8 @@
         <div class="row">
           <div class="col-lg-7">
             <div class="float-left">
-              <p>Phone: +880 1750 691974</p>
-              <p>email: yeaminhossain2@gmail.com</p>
+              <p></p>
+              <p></p>
             </div>
           </div>
           <div class="col-lg-5">
