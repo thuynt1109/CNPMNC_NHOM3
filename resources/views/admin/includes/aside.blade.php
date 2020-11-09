@@ -5,7 +5,7 @@
              alt="AdminLTE Logo"
              class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">Ecommerce</span>
+        <span class="brand-text font-weight-light">GÁC XẾP</span>
     </a>
 
     <!-- Sidebar -->
@@ -13,7 +13,7 @@
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{ asset('admin/images') }}/avatar5.png" class="img-circle elevation-2" alt="User Image">
+                <img src="{{ asset('admin/images') }}/avt.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 <a href="#" class="d-block">{{Auth::user()->name}}</a>
@@ -27,7 +27,7 @@
                      with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview">
                     <a href="{{route('home')}}" class="nav-link">
-                        <i class="nav-icon fa fa-dashboard"></i>
+                        <i class="nav-icon fa fa-tachometer-alt"></i>
                         <p>
                             Dashboard
                         </p>
@@ -35,22 +35,22 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{route('product.index')}}" class="nav-link">
-                        <i class="nav-icon fa fa-arrow-right"></i>
+                        <i class="nav-icon fa fa-book"></i>
                         <p>
                             Product
                         </p>
                     </a>
                 </li>
-                @if(Auth::user()->role == '1')
+               @if(Auth::user()->role == '1')
                 <li class="nav-item">
                     <a href="{{route('admin.category')}}" class="nav-link">
-                        <i class="nav-icon fa fa-arrow-right"></i>
+                        <i class="nav-icon fa fa-book-open"></i>
                         <p>
                             Category
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="{{route('admin.brand')}}" class="nav-link">
                         <i class="nav-icon fa fa-arrow-right"></i>
                         <p>
@@ -58,10 +58,10 @@
                         </p>
                     </a>
                 </li>
-                
+                 -->
                 <li class="nav-item">
                     <a href="{{route('admin.order')}}" class="nav-link">
-                        <i class="nav-icon fa fa-arrow-right"></i>
+                        <i class="nav-icon fa fa-shopping-cart"></i>
                         <p>
                             Order
                         </p>
@@ -69,7 +69,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{route('admin.user')}}" class="nav-link">
-                        <i class="nav-icon fa fa-arrow-right"></i>
+                        <i class="nav-icon fa fa-users"></i>
                         <p>
                             User
                         </p>

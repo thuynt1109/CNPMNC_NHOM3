@@ -48,6 +48,8 @@ const router = new VueRouter({
     }
 })
 
+
+
 //vue instance
 const app = new Vue({
     el: '#app',

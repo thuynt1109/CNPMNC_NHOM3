@@ -6,6 +6,10 @@ import userLoginPage from './components/public/userLogin'
 import userRegisterPage from './components/public/userRegister'
 import shipping from './components/public/shipping'
 import payment from './components/public/payment'
+import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router)
 
 export const routes = [
   { 
@@ -39,5 +43,45 @@ export const routes = [
   { 
     path: '/payment', 
     component: payment
-  }
+  },
+  
 ]
+
+
+// export default new Router({
+//   routes:[
+//     { 
+//       path: '/', 
+//       component: Homepage
+//     },
+//     { 
+//       path: '/category/:id', 
+//       component: category 
+//     },
+//     { 
+//       path: '/single-product/:id', 
+//       component: singleProduct 
+//     },
+//     { 
+//       path: '/cart', 
+//       component: allCart
+//     },
+//     { 
+//       path: '/user-login', 
+//       component: userLoginPage
+//     },
+//     { 
+//       path: '/user-register', 
+//       component: userRegisterPage
+//     },
+//     { 
+//       path: '/shipping', 
+//       component: shipping
+//     },
+//     { 
+//       path: '/payment', 
+//       component: payment
+//     },
+//   ],
+//   mode: "history"
+// })
