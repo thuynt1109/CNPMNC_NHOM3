@@ -48,7 +48,7 @@
                                 <tr>
                                     <th>Sl No.</th>
                                     <th>Category</th>
-                                    <th>Brand</th>
+                                    
                                     <th>Product Name</th>
                                     <th>Price</th>
                                     <th>Image</th>
@@ -64,7 +64,7 @@
                                     <tr>
                                         <td>{{$sl++}}</td>
                                         <td>{{$products->cat_name}}</td>
-                                        <td>{{$products->brand_name}}</td>
+                                        
                                         <td>{{$products->product_name}}</td>
                                         <td>৳ {{$products->product_price}}</td>
                                         <td>
@@ -91,7 +91,7 @@
                                     <tr>
                                         <td>{{$sl++}}</td>
                                         <td>{{$products->cat_name}}</td>
-                                        <td>{{$products->brand_name}}</td>
+                                        
                                         <td>{{$products->product_name}}</td>
                                         <td>৳ {{$products->product_price}}</td>
                                         <td>
@@ -121,7 +121,7 @@
                                 <tr>
                                     <th>Sl No.</th>
                                     <th>Category</th>
-                                    <th>Brand</th>
+                                    
                                     <th>Product Name</th>
                                     <th>Price</th>
                                     <th>Image</th>
@@ -168,14 +168,14 @@
                         console.log(data);
                             
                             $('#e_product_cat').val(data.cat_id);
-                            $('#e_product_brand').val(data.brand_id);
+                            
                             $('#e_product_name').val(data.product_name);
                             $('#e_short_desc').val(data.short_desc);
                             $('#e_long_desc').val(data.long_desc);
                             $('#e_discount_price').val(data.discount_price);
                             $('#e_product_price').val(data.product_price);
                             $('#e_quantity').val(data.quantity);
-                            $('#e_product_size').val(data.size);
+                          
                             $('#e_product_status').val(data.status);
 
                             $('#updateProductForm').attr('action', 'product/'+id);

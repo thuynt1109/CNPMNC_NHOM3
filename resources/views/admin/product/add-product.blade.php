@@ -29,15 +29,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="product_status">Brand</label>
-                        <select class="form-control" name="brand_id" id="product_brand">
-                            <option value="">Select Brand</option>
-                            @foreach($brand as $brands)
-                                <option value="{{$brands->id}}">{{$brands->brand_name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
+                    
                     <div class="form-group">
                         <label for="product_name">Product Name</label>
                         <input type="text" name="product_name" class="form-control" id="product_name" placeholder="Enter product Name" required>
@@ -74,7 +66,7 @@
                         <label for="quantity">Quantity</label>
                         <input type="number" name="quantity" class="form-control" id="quantity" placeholder="Enter Total quantity">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="product_size">Size</label>
                         <select class="form-control" name="size" id="product_size">
                             <option value="">Select size</option>
@@ -84,7 +76,7 @@
                             <option value="xl">XL</option>
                             <option value="xxl">XXL</option>
                         </select>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="filePhoto">Product Image</label>
                         <input type="file" name="product_image" class="form-control-file" id="filePhoto4" onchange="preview_image(event)">

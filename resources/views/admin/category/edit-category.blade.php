@@ -28,10 +28,17 @@
                         <label for="cat_desc">Category Description</label>
                         <textarea class="form-control" name="cat_desc" id="edit_cat_desc"></textarea>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="filePhoto">Category Image</label>
                         <input type="file" name="cat_image" class="form-control-file" id="filePhoto2">
                         <img src="" id="previewHolder2" width="150px">
+                    </div> -->
+                    <div class="form-group">
+                        <label for="cat_status">Publication Status</label>
+                        <select class="form-control" name="cat_status" id="cat_status">
+                            <option value="1">Published</option>
+                            <option value="0">Unpublished</option>
+                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">

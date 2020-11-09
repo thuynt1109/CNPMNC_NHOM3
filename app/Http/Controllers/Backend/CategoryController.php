@@ -71,6 +71,7 @@ class CategoryController extends Controller
         }
 
         $category->cat_name = $request->cat_name;
+        $category->cat_status = $request->cat_status;
         $category->cat_desc = $request->cat_desc;
         $category->save();
 

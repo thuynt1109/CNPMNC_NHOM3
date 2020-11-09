@@ -83,5 +83,5 @@ export const routes = [
 //       component: payment
 //     },
 //   ],
-//   mode: "history"
+//   // mode: "history"
 // })

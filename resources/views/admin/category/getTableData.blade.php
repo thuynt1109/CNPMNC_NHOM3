@@ -4,13 +4,13 @@
                                             <td>{{ $sl++ }}</td>
                                             <td id="t_cat_name" data-id1="{{ $category->id }}" ondblclick="this.contentEditable=true" onblur="this.contentEditable=false">{{ $category->cat_name }}</td>
                                             <td id="t_cat_desc" data-id2="{{ $category->id }}" contenteditable>{{ $category->cat_desc }}</td>
-                                            <td>
+                                            <!-- <td>
                                                 @if($category->cat_image == '')
                                                 No Image
                                                 @else
                                                 <img src="{{ asset($category->cat_image) }}" height="50px" alt="category image">
                                                 @endif
-                                            </td>
+                                            </td> -->
                                             <td>
                                                 @if($category->cat_status == 1)
                                                 <a id="{{$category->id}}" href="" class="btn btn-primary unpublish" data-toggle="tooltip" title="Published">

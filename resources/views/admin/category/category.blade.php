@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Category Page</h1>
+                    <h1>Trang Danh Mục</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Category</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Trang chủ</a></li>
+                        <li class="breadcrumb-item active">Danh mục</li>
                     </ol>
                 </div>
             </div>
@@ -36,9 +36,9 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <span class="h4">Category List</span>
+                                <span class="h4">Danh sách</span>
                                 <button class="btn btn-primary float-right" data-toggle="modal" data-target="#addCatModal">
-                                <i class="fa fa-plus"><b> Add New</b></i>
+                                <i class="fa fa-plus"><b>Thêm mới</b></i>
                                 </button>
                             </div>
                             <!-- /.card-header -->
@@ -46,10 +46,10 @@
                                 <table id="category" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Sl No.</th>
-                                            <th>Category Name</th>
-                                            <th>Description</th>
-                                            <th>Image</th>
+                                            <th>STT</th>
+                                            <th>Tên danh mục</th>
+                                            <th>Mô tả</th>
+                                            <!-- <th>Hình ảnh</th> -->
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -61,13 +61,13 @@
                                             <td>{{ $sl++ }}</td>
                                             <td id="t_cat_name" >{{ $category->cat_name }}</td>
                                             <td>{{ $category->cat_desc }}</td>
-                                            <td>
+                                            <!-- <td>
                                                 @if($category->cat_image == '')
                                                 No Image
                                                 @else
                                                 <img src="{{ asset($category->cat_image) }}" height="50px" alt="category image">
                                                 @endif
-                                            </td>
+                                            </td> -->
                                             <td>
                                                 @if($category->cat_status == 1)
                                                 <a id="{{$category->id}}" href="" class="btn btn-primary unpublish" data-toggle="tooltip" title="Published">
@@ -93,10 +93,10 @@
                                     </tbody>
                                     <tfoot>
                                     <tr>
-                                        <th>Sl No.</th>
-                                        <th>Category Name</th>
+                                        <th>STT</th>
+                                        <th>Tên danh mục</th>
                                         <th>Description</th>
-                                        <th>Image</th>
+                                        <!-- <th>Image</th> -->
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -220,7 +220,7 @@
                     $('#edit_id').val(data.id);
                     $('#edit_cat_name').val(data.cat_name);
                     $('#edit_cat_desc').val(data.cat_desc);
-                    $('#previewHolder2').attr('src', "{{asset('')}}"+data.cat_image);
+                    // $('#previewHolder2').attr('src', "{{asset('')}}"+data.cat_image);
             }
         })
     });
